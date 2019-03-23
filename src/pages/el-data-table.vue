@@ -90,6 +90,7 @@ export default {
                   {prop: 'lang', label: '开发语言',
                   formatter:row=>Lang.find(it=>row.lang===it.id).name},
                   {prop: 'up_time', label: '最后更新时间',
+                  minWidth:'110px',
                   formatter:row =>(format(row.up_time,'YYYY-MM-DD')) },
                   {prop: 'status',
                     label: '状态',
