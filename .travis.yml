@@ -2,7 +2,7 @@ language: node_js
 node_js:
 - lts/*
 env:
-- API_SERVER=http://yapi.demo.qunar.com/mock/62886 PUBLIC_PATH=http://levy.work/nuxt-element-dashboard/
+- API_SERVER=http://yapi.demo.qunar.com/mock/62886  PUBLIC_PATH=http://levy.work/nuxt-element-dashboard/
 install:
 - yarn
 script:

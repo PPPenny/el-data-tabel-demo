@@ -3,8 +3,8 @@ require('dotenv').config()
 const env = process.env
 const isProd = env.MODE == 'prod'
 const mockServer =
-// 'http://yapi.demo.qunar.com/mock/62886'
-  'https://easy-mock.com/mock/5c1b3895fe5907404e654045/femessage-mock'
+'http://yapi.demo.qunar.com/mock/62886'
+  // 'https://easy-mock.com/mock/5c1b3895fe5907404e654045/femessage-mock'
 
 // 不能以斜杠结尾
 let apiServer = process.env.API_SERVER
@@ -43,7 +43,15 @@ module.exports = {
     NO_LOGIN: process.env.NO_LOGIN,
     COOKIE_PATH: process.env.COOKIE_PATH || '/'
   },
-  proxy: config.env[env.MODE],
+  proxy: [
+      [
+        '/api', 
+        { 
+          target: 'http://yapi.demo.qunar.com/mock/62886', // 
+          pathRewrite: { '^/api' : '/' }
+        }
+    ]],
+  // proxy: config.env[env.MODE],
   router: {
     middleware: ['meta'],
     mode: 'hash'

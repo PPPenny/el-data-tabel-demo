@@ -18,7 +18,7 @@ export default {
   data() {
     return {
        tableConfig:{
-          url:'/getList',
+          url:'/api/getList',
           hasEdit:false,
           operationAttrs:{
             width:"210px"
@@ -129,9 +129,7 @@ export default {
   },
    
   methods: {
-     
-    
-   
+  
   }
 }
 </script>

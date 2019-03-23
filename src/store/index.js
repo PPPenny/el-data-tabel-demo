@@ -41,9 +41,6 @@ export const mutations = {
       state[k] = payload[k]
     })
   },
-  // getList(state){
-
-  // }
 }
 
 // Action 提交的是 mutation，而不是直接变更状态
@@ -88,31 +85,5 @@ export const actions = {
       meta[item.key] = item.value
     })
     commit('update', {meta})
-  },
-  // async getList ({commit}){
-  //   let res = await this.$axios.$get('http://yapi.demo.qunar.com/mock/46947/api/interface/list')
-  //   // 封装返回来的数据结构 
-  //   //     {
-  //   //   "code": 0,
-  //   //   "msg": "ok",
-  //   //   "payload": {
-  //   //     "content": [], // the data to render
-  //   //     "totalElements": 2 // total count
-  //   //   }
-  //   // }
-  //   config.payload={
-  //       content:[...res.data],
-  //       totalElements:res.data.length
-  //   }
-  //   // const newObj={
-  //   //   code:res.errcode,
-  //   //   msg:res.errmsg ==="成功"? 'ok':'',
-  //   //   payload:{
-  //   //     content:[...res.data],
-  //   //     totalElements:res.data.length
-  //   //   }
-  //   // };
-  //   // console.log(newObj);
-  //   // commit('getList',newObj);
-  // }
+  }
 }
