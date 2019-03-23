@@ -1,0 +1,117 @@
+{
+    "code": 0,
+    "msg": "ok",
+    "payload": {
+        "totalElements": 12,
+        "content": [
+            {
+                "_id": 1,
+                "name": "eTest组件",
+                "type": 1,
+                "ver": "1.0.0",
+                "lang": 1,
+                "up_time": "2018/5/18",
+                "status": 1
+            },
+            {
+                "_id":2,
+                "name": "test01",
+                "type": 2,
+                "ver": "2.3.4",
+                "lang": 2,
+                "up_time": "2018/5/11",
+                "status": 0
+            },
+            {
+                "_id": 3,
+                "name": "test",
+                "type": 3,
+                "ver": "1.0.1",
+                "lang": 3,
+                "up_time": "2018/4/26",
+                "status": 0
+            },
+            {
+                "_id": 4,
+                "name": "通信服务",
+                "type": 4,
+                "ver": "2.1.4",
+                "lang": 2,
+                "up_time": "2018/4/19",
+                "status": 1
+            },
+            {
+                "_id": 5,
+                "name": "应用配置中心",
+                "type": 4,
+                "ver": "2.1.5",
+                "lang": 2,
+                "up_time": "2018/4/20",
+                "status": 1
+            },
+            {
+                "_id": 6,
+                "name": "元数据",
+                "type": 5,
+                "ver": "2.1.4",
+                "lang": 2,
+                "up_time": "2018/4/12",
+                "status": 1
+            },
+            {
+                "_id": 7,
+                "name": "数据库操作",
+                "type": 5,
+                "ver": "2.1.4",
+                "lang": 2,
+                "up_time": "2018/4/12",
+                "status": 1
+            },
+            {
+                "_id": 8,
+                "name": "对象存储OSS",
+                "type": 5,
+                "ver": "2.1.4",
+                "lang": 2,
+                "up_time": "2018/4/12",
+                "status": 1
+            },
+            {
+                "_id": 9,
+                "name": "分布式锁",
+                "type": 3,
+                "ver": "2.1.4",
+                "lang": 2,
+                "up_time": "2018/4/12",
+                "status": 1
+            },
+            {
+                "_id": 10,
+                "name": "分布式任务调度",
+                "type": 3,
+                "ver": "2.1.4",
+                "lang": 2,
+                "up_time": "2018/4/12",
+                "status": 1
+            },
+            {
+                "_id": 11,
+                "name": "eTest组件",
+                "type": 1,
+                "ver": "2.1.4",
+                "lang": 1,
+                "up_time": "2018/8/12",
+                "status": 0
+            },
+            {
+                "_id": 12,
+                "name": "打包脚本",
+                "type": 2,
+                "ver": "2.1.4",
+                "lang": 3,
+                "up_time": "2018/8/27",
+                "status": 1
+            }
+        ]
+    }
+}

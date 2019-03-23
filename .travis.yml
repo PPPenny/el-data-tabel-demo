@@ -1,0 +1,18 @@
+language: node_js
+node_js:
+- lts/*
+env:
+- API_SERVER=http://yapi.demo.qunar.com/mock/62886 PUBLIC_PATH=http://levy.work/nuxt-element-dashboard/
+install:
+- yarn
+script:
+- yarn build
+cache: yarn
+deploy:
+  provider: pages
+  skip-cleanup: true
+  keep-history: true
+  local-dir: dist
+  on:
+    branch: master
+  github-token: $GITHUB_TOKEN
