@@ -77,6 +77,20 @@ export default {
             $el: {
               placeholder: '请选择'
             }
+          },
+          {
+            $type: 'input',
+            $id: 'ver',
+            label: '版本',
+            rules: [
+              {
+                required: true,
+                message: '请输入版本号',
+                trigger: 'blur',
+                transform: v => v && v.trim()
+              }
+            ],
+            $el: {placeholder: '请输入版本号'}
           }
         ],
         columns: [
