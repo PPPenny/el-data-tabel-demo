@@ -2,9 +2,8 @@ require('dotenv').config()
 
 const env = process.env
 const isProd = env.MODE == 'prod'
-const mockServer =
-'http://yapi.demo.qunar.com/mock/62886'
-  // 'https://easy-mock.com/mock/5c1b3895fe5907404e654045/femessage-mock'
+const mockServer = 'http://yapi.demo.qunar.com/mock/62886'
+// 'https://easy-mock.com/mock/5c1b3895fe5907404e654045/femessage-mock'
 
 // 不能以斜杠结尾
 let apiServer = process.env.API_SERVER
@@ -36,7 +35,8 @@ if (isProd && apiServer) {
     baseURL: apiServer
   }
 }
-
+// http://yapi.demo.qunar.com/mock/62886 不能删除
+// http://rest.apizza.net/mock/9c3dbb2a718e099c106d23019ca0c4de 其他地方的mock数据，测试一哈啊
 module.exports = {
   mode: 'spa',
   env: {
@@ -44,13 +44,14 @@ module.exports = {
     COOKIE_PATH: process.env.COOKIE_PATH || '/'
   },
   proxy: [
-      [
-        '/api', 
-        { 
-          target: 'http://yapi.demo.qunar.com/mock/62886', // 
-          pathRewrite: { '^/api' : '/' }
-        }
-    ]],
+    [
+      '/api',
+      {
+        target: 'http://rest.apizza.net/mock/9c3dbb2a718e099c106d23019ca0c4de', //
+        pathRewrite: {'^/api': '/'}
+      }
+    ]
+  ],
   // proxy: config.env[env.MODE],
   router: {
     middleware: ['meta'],
