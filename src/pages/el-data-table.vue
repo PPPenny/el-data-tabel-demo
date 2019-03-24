@@ -17,7 +17,7 @@ export default {
       tableConfig: {
         url: '/api/getList',
         hasEdit: false,
-        text: '',
+        dialogEditTitle: '编辑',
         operationAttrs: {
           width: '210px'
         },
@@ -146,8 +146,9 @@ export default {
               return this.text
             },
             size: 'small',
-            atClick: row => {
-              return Promise.resolve(alert('修改' + row.name))
+            atClick: function(row) {
+              let txt = Number(row.status) === 1 ? '下架 ' : '上架'
+              return Promise.resolve(alert(txt + ':' + row.name))
             }
           }
         ]
