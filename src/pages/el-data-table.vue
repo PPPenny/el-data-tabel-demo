@@ -3,7 +3,6 @@
     <el-data-table ref="dataTable" v-bind="tableConfig"> </el-data-table>
   </div>
 </template>
-
 <script>
 import Vue from 'vue'
 import ElDataTable from 'el-data-table'
@@ -18,6 +17,7 @@ export default {
       tableConfig: {
         url: '/api/getList',
         hasEdit: false,
+        text: '',
         operationAttrs: {
           width: '210px'
         },
@@ -127,10 +127,13 @@ export default {
             }
           },
           {
-            text: '上架',
+            show: function(row) {
+              this.text = Number(row.status) === 1 ? '下架 ' : '上架'
+              return this.text
+            },
             size: 'small',
             atClick: row => {
-              return Promise.reject(alert('修改' + row.name))
+              return Promise.resolve(alert('修改' + row.name))
             }
           }
         ]
